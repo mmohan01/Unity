@@ -217,11 +217,9 @@ public class PlayerMovement : MonoBehaviour
     // If cue ball gets potted, reset it to its initial position and reset its velocity and apply penalty.
     void OnCollisionEnter(Collision collision)
     {
+        // Penalty is already applied for not hitting another ball so doesn't need to be applied twice.
         if (collision.gameObject.name == "Table Bottom")
-        {
             ResetPosition();
-            StartCoroutine(Penalty(5f));
-        }
 
         if (collision.gameObject.name.Contains("Ball"))
             collided = true;

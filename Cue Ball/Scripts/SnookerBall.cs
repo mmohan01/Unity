@@ -50,7 +50,7 @@ public class SnookerBall : MonoBehaviour
         if (transform.position.y <= -1)
         {
             ResetPosition(defaultPosition);
-            StartCoroutine(GameObject.Find("Player").GetComponent<PlayerMovement>().Penalty(10f));            
+            StartCoroutine(GameObject.Find("Player").GetComponent<PlayerMovement>().Penalty(10f));          
         }
     }
 
